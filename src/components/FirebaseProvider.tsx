@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
-import { analytics } from "@/lib/firebase";
+import { analytics } from "@/lib/firebase-env";
 
 export default function FirebaseProvider({
   children,

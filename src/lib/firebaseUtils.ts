@@ -1,4 +1,4 @@
-import { analytics } from "./firebase";
+import { analytics } from "./firebase-env";
 import { logEvent } from "firebase/analytics";
 
 // Common analytics events
