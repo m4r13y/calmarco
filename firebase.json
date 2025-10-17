@@ -29,5 +29,16 @@
     ],
     "cleanUrls": true,
     "trailingSlash": true
+  },
+  "apphosting": {
+    "backendId": "calmarco",
+    "rootDir": "/",
+    "ignore": [
+      "node_modules",
+      ".git",
+      "firebase-debug.log",
+      "firebase-debug.*.log",
+      "functions"
+    ]
   }
 }

@@ -1,0 +1,19 @@
+{
+  // Hide generated output from the editor, search, and file watcher
+  "files.exclude": {
+    "**/out/**": true
+  },
+  "search.exclude": {
+    "**/out/**": true,
+    "**/.next/**": true
+  },
+  "files.watcherExclude": {
+    "**/out/**": true,
+    "**/.next/**": true
+  },
+
+  // Treat generated HTML as plaintext to silence inline script validation in Problems view
+  "files.associations": {
+    "out/**/*.html": "plaintext"
+  }
+}
