@@ -13,4 +13,4 @@ echo "🌐 Deploying to Firebase Hosting..."
 firebase deploy --only hosting
 
 echo "✅ Deployment completed successfully!"
-echo "🎉 Your site should be available at: https://calmarco.web.app"
+echo "🎉 Your site should be available at: https://calmarco.com"

@@ -45,24 +45,25 @@
 
 :root {
   --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.129 0.042 264.695);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.129 0.042 264.695);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.129 0.042 264.695);
-  --primary: oklch(0.208 0.042 265.755);
-  --primary-foreground: oklch(0.984 0.003 247.858);
-  --secondary: oklch(0.968 0.007 247.896);
-  --secondary-foreground: oklch(0.208 0.042 265.755);
-  --muted: oklch(0.968 0.007 247.896);
-  --muted-foreground: oklch(0.554 0.046 257.417);
-  --accent: oklch(0.968 0.007 247.896);
-  --accent-foreground: oklch(0.208 0.042 265.755);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.929 0.013 255.508);
-  --input: oklch(0.929 0.013 255.508);
-  --ring: oklch(0.704 0.04 256.788);
+  /* Default tokens are unused when .dark class is present, but keep sensible light values */
+  --background: hsl(0 0% 100%);
+  --foreground: hsl(240 10% 3.9%);
+  --card: hsla(147, 100%, 74%, 0.1);
+  --card-foreground: hsl(240 10% 3.9%);
+  --popover: hsl(0 0% 100%);
+  --popover-foreground: hsl(240 10% 3.9%);
+  --primary: hsl(240 5.9% 10%);
+  --primary-foreground: hsl(0 0% 98%);
+  --secondary: hsl(240 4.8% 95.9%);
+  --secondary-foreground: hsl(240 5.9% 10%);
+  --muted: hsl(240 4.8% 95.9%);
+  --muted-foreground: hsl(240 3.8% 46.1%);
+  --accent: hsl(240 4.8% 95.9%);
+  --accent-foreground: hsl(240 5.9% 10%);
+  --destructive: hsl(0 84.2% 60.2%);
+  --border: hsl(240 5.9% 90%);
+  --input: hsl(240 5.9% 90%);
+  --ring: hsl(142 72.3% 40.8%);
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
@@ -76,40 +77,51 @@
   --sidebar-accent-foreground: oklch(0.208 0.042 265.755);
   --sidebar-border: oklch(0.929 0.013 255.508);
   --sidebar-ring: oklch(0.704 0.04 256.788);
+
+  /* Mint palette for subtle accents */
+  --mint-50: oklch(0.985 0.02 160);
+  --mint-100: oklch(0.97 0.03 160);
+  --mint-200: oklch(0.94 0.05 160);
+  --mint-300: oklch(0.89 0.08 160);
+  --mint-400: oklch(0.83 0.11 160);
+  --mint-500: oklch(0.77 0.13 160);
 }
 
 .dark {
-  --background: oklch(0.129 0.042 264.695);
-  --foreground: oklch(0.984 0.003 247.858);
-  --card: oklch(0.208 0.042 265.755);
-  --card-foreground: oklch(0.984 0.003 247.858);
-  --popover: oklch(0.208 0.042 265.755);
-  --popover-foreground: oklch(0.984 0.003 247.858);
-  --primary: oklch(0.929 0.013 255.508);
-  --primary-foreground: oklch(0.208 0.042 265.755);
-  --secondary: oklch(0.279 0.041 260.031);
-  --secondary-foreground: oklch(0.984 0.003 247.858);
-  --muted: oklch(0.279 0.041 260.031);
-  --muted-foreground: oklch(0.704 0.04 256.788);
-  --accent: oklch(0.279 0.041 260.031);
-  --accent-foreground: oklch(0.984 0.003 247.858);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.551 0.027 264.364);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.208 0.042 265.755);
-  --sidebar-foreground: oklch(0.984 0.003 247.858);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.984 0.003 247.858);
-  --sidebar-accent: oklch(0.279 0.041 260.031);
-  --sidebar-accent-foreground: oklch(0.984 0.003 247.858);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.551 0.027 264.364);
+  /* Requested dark theme palette (updated background) */
+  --background: hsl(141 3.3% 9.4%);
+  --foreground: hsl(141 13.1% 92.1%);
+  --card: hsl(147 30.7% 8%);
+  --card-foreground: hsl(141 13.1% 92.1%);
+  --popover: hsl(147 30.7% 8%);
+  --popover-foreground: hsl(141 13.1% 92.1%);
+  --primary: hsl(126 61% 80%);
+  --primary-foreground: hsl(147 30.7% 6.5%);
+  --secondary: hsl(147 20% 14%);
+  --secondary-foreground: hsl(141 13.1% 92.1%);
+  --muted: hsla(126 8.9% 72.5% / 0.20);
+  --muted-foreground: hsl(126 25% 30%);
+  --accent: hsl(147 20% 14%);
+  --accent-foreground: hsl(141 13.1% 92.1%);
+  --destructive: hsl(0 84% 60%);
+  --border: hsl(147 18% 18%);
+  --input: hsl(147 18% 18%);
+  --ring: hsl(126 61% 80%);
+
+  /* Charts/sidebar tokens are less important here; keep harmonious tints */
+  --chart-1: hsl(160 60% 40%);
+  --chart-2: hsl(126 50% 55%);
+  --chart-3: hsl(147 40% 45%);
+  --chart-4: hsl(100 50% 50%);
+  --chart-5: hsl(85 55% 48%);
+  --sidebar: hsl(147 25% 10%);
+  --sidebar-foreground: hsl(141 13.1% 92.1%);
+  --sidebar-primary: hsl(126 61% 80%);
+  --sidebar-primary-foreground: hsl(147 30.7% 6.5%);
+  --sidebar-accent: hsl(147 20% 14%);
+  --sidebar-accent-foreground: hsl(141 13.1% 92.1%);
+  --sidebar-border: hsl(147 18% 18%);
+  --sidebar-ring: hsl(126 61% 80%);
 }
 
 @layer base {
@@ -118,5 +130,92 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-size: 18px;
+    line-height: 1.65;
+  }
+  h1, h2, h3, h4, h5, h6 { font-family: var(--font-heading), var(--font-geist-sans), ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, Apple Color Emoji, Segoe UI Emoji; }
+  h1 { font-weight: 700; letter-spacing: -0.015em; }
+  h2 { font-weight: 700; letter-spacing: -0.01em; }
+  h3 { font-weight: 600; }
+
+  /* Form controls: keep dark background always (override autofill) */
+  input, textarea, select {
+    background-color: var(--secondary) !important;
+    color: var(--foreground);
+  }
+  input::placeholder, textarea::placeholder {
+    color: var(--foreground);
+    opacity: 0.6;
+  }
+  input:focus, textarea:focus, select:focus {
+    outline: 2px solid var(--ring);
+    outline-offset: 1px;
+  }
+  /* Autofill overrides */
+  input:-webkit-autofill,
+  textarea:-webkit-autofill,
+  select:-webkit-autofill {
+    -webkit-text-fill-color: var(--foreground);
+    -webkit-box-shadow: 0 0 0 1000px var(--secondary) inset;
+            box-shadow: 0 0 0 1000px var(--secondary) inset;
+    caret-color: var(--foreground);
+  }
+  input:-webkit-autofill:focus,
+  textarea:-webkit-autofill:focus,
+  select:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0 1000px var(--secondary) inset, 0 0 0 2px var(--ring);
+            box-shadow: 0 0 0 1000px var(--secondary) inset, 0 0 0 2px var(--ring);
+  }
+}
+
+@layer components {
+  /* Card primitives */
+  .card {
+    @apply rounded-xl border p-7 shadow-sm transition-all;
+    background-color: color-mix(in oklch, var(--background) 80%, var(--card) 20%);
+  }
+  .card-hover {
+    @apply hover:shadow-md hover:-translate-y-0.5;
+  }
+  .card-mint-subtle {
+    /* Minimal look: no gradient, just a soft mint border */
+    background-color: color-mix(in oklch, var(--background) 80%, var(--card) 20%);
+    border-color: oklch(0.94 0.05 160 / 28%);
+  }
+  .card-mint {
+    /* Slight tint only */
+    background-color: color-mix(in oklch, var(--background) 80%, oklch(0.97 0.03 160) 20%);
+    border-color: oklch(0.9 0.06 160 / 36%);
+  }
+  .card-mint-subtle:hover, .card-mint:hover {
+    border-color: oklch(0.89 0.08 160 / 55%);
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center rounded-md px-5 py-3 text-base font-semibold transition-colors border border-transparent;
+  }
+  .btn-primary {
+    @apply bg-primary text-primary-foreground hover:bg-primary/90;
+  }
+  .btn-outline {
+    @apply border-border text-foreground hover:bg-foreground/5;
+  }
+
+  /* Prettier checklist bullets */
+  .list-check { list-style: none; padding-left: 0; margin: 0; }
+  .list-check li { display: flex; align-items: flex-start; gap: 0.75rem; color: var(--foreground); opacity: 0.88; }
+  .list-check li + li { margin-top: 0.5rem; }
+  .list-check li::before {
+    content: "✓";
+    color: var(--primary);
+    font-weight: 800;
+    line-height: 1;
+    margin-top: 0.15rem;
+  }
+}
+
+@layer utilities {
+  .container {
+    @apply mx-auto max-w-6xl px-6;
   }
 }
