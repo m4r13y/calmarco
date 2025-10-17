@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { site } from "@/lib/site";
-import dynamic from "next/dynamic";
-
-const DemoRequestForm = dynamic(() => import("./DemoRequestForm"), { ssr: false });
+import DemoRequestForm from "./DemoRequestForm";
 
 export const metadata: Metadata = {
   title: `Pricing | ${site.brandName}`,
