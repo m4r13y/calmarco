@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { site } from "@/lib/site";
+import dynamic from "next/dynamic";
+
+const DemoRequestForm = dynamic(() => import("./DemoRequestForm"), { ssr: false });
 
 export const metadata: Metadata = {
   title: `Pricing | ${site.brandName}`,
@@ -51,16 +54,7 @@ export default function PricingPage() {
       <section className="card card-mint p-6">
   <h2 className="text-3xl font-semibold mb-2">Request a demo</h2>
   <p className="text-foreground/80 mb-4 text-lg">Tell us about your goals and challenges. We'll follow up within 1 business day.</p>
-        <form action="https://formspree.io/f/your-id" method="POST" className="grid gap-3 md:grid-cols-2">
-          <input className="border rounded-md p-2 md:col-span-1" name="name" placeholder="Your name" required />
-          <input className="border rounded-md p-2 md:col-span-1" name="email" placeholder="Email address" type="email" required />
-          <input className="border rounded-md p-2 md:col-span-1" name="company" placeholder="Company (optional)" />
-          <input className="border rounded-md p-2 md:col-span-1" name="phone" placeholder="Phone (optional)" />
-          <textarea className="border rounded-md p-2 md:col-span-2" name="message" placeholder="What can we help with?" rows={5} required />
-          <div className="md:col-span-2">
-            <button className="btn btn-primary" type="submit">Send request</button>
-          </div>
-        </form>
+        <DemoRequestForm />
         <p className="text-xs text-foreground/60 mt-3">
           By submitting, you agree to our <Link className="underline" href="/terms">Terms of Service</Link> and acknowledge our <Link className="underline" href="/refunds">Refund & Dispute Policy</Link>.
         </p>
